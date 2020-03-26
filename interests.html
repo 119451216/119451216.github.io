@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Interests</title>
+		<meta name="viewport" content="width=device-width, initial-width=1.0">
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://kit.fontawesome.com/af5f655755.js" crossorigin="anonymous"></script>
+		<style type="text/css">
+			body {
+				margin: 0; 
+				overflow-x: hidden;
+			}
+
+			p {
+				padding-left: 50px;
+				padding-right: 50px;
+			}
+
+			table {
+				border: solid black 1px;
+				border-collapse: collapse;
+			}
+
+			.content {
+				margin: 0;
+			}
+
+			.topnav {
+				overflow: hidden;
+				background-color: blanchedalmond;
+			}
+
+			.topnav a {
+				float: left;
+				display: block;
+				text-align: center;
+				padding: 15px 20px;
+				text-decoration: none;
+				color: black;
+			}
+
+			.topnav a:hover {
+				background-color: white;
+				color: black;
+			}
+
+			.title {
+				background-color: cadetblue;
+				padding: 15px;
+				text-align: center;
+				border: solid black 3px;
+			}
+
+			.subtitle {
+				background-color: cadetblue;
+				padding: 10px;
+				text-align: center;
+				border: solid black 2px;
+			}
+
+			.nav {
+				overflow: hidden;
+				background-color: blanchedalmond;
+				border: solid black 1px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			.nav a {
+				float: center;
+				display: block;
+				color: black;
+				text-align: center;
+				padding: 15px 20px;
+				text-decoration: none;
+				border: 1px solid white;
+			}
+
+			.nav a:hover {
+				background-color: white;
+				color: black;
+			}
+			
+			#containerSport {
+				overflow: hidden;
+				width: 600px;
+				height: 400px;
+				margin: 0 auto;
+				cursor: pointer;
+				margin-top: 30px;
+			}
+			
+			#imgsSport {
+				display: block;
+				padding: 0;
+				width: 200%;
+			}
+			
+			#imgsSport li {
+				padding-right: 10px;
+				display: inline-block;
+				*display: inline;
+			}
+			
+			.titleSport {
+				display: block;
+				width: 100%;
+				height: 38px;
+				line-height: 38px;
+				color: white;
+				font-weight: bold;
+				text-align: center;
+				background: #ddd;
+			}
+			
+			#containerTravel {
+				overflow: hidden;
+				width: 600px;
+				height: 400px;
+				margin: 0 auto;
+				cursor: pointer;
+				margin-top: 30px;
+			}
+			
+			#imgsTravel {
+				display: block;
+				padding: 0;
+				width: 200%;
+			}
+			
+			#imgsTravel li {
+				padding-right: 10px;
+				display: inline-block;
+				*display: inline;
+			}
+			
+			.titleTravel {
+				display: block;
+				width: 100%;
+				height: 38px;
+				line-height: 38px;
+				color: white;
+				font-weight: bold;
+				text-align: center;
+				background: #ddd;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="title">
+			<h1 style="font-family: Arial, Helvetica, sans-serif;">Interests</h1>
+		</div>
+		
+		<div class="topnav">
+			<a href="home.html" style="font-family: Arial, Helvetica, sans-serif;"><i class="fas fa-home"></i> Home</a>
+			<a href="cv.html" style="font-family: Arial, Helvetica, sans-serif;"><i class="fas fa-address-card"></i> Curriculum Vitae</a>
+			<a href="consulting.html" style="font-family: Arial, Helvetica, sans-serif;"><i class="fas fa-briefcase"></i> Consulting</a>
+			<a href="contact.html" style="font-family: Arial, Helvetica, sans-serif;"><i class="fas fa-address-book"></i> Contact</a>
+		</div>
+		
+		<div class="subtitle">
+			<h2 style="font-family: Arial, Helvetica, sans-serif;">Sport</h2>
+		</div>
+		<div id="hurling">
+			<center>
+				<font size="4" style="font-family: Arial, Helvetica, sans-serif;">I have played hurling most of my life. I started playing the sport when I was 6 years old with my local club <a href="https://en.wikipedia.org/wiki/Newtownshandrum_GAA">Newtownshandrum</a>. Thoughout my juvenile years, I have achieved many things, including the honour of being captain of a winning Premier 2 U13 team and winning a Premier 1 title at U14. Subsequentually, my love for the sport has grown over the years. Currently I am still playing hurling with my club am I am playing Fresher B hurling with UCC. I am in my second season playing Premier Senior with my club in County Cork.</font>
+			</center>
+		</div>
+			<br />
+		<div id="containerSport"> <span class="titleSport" style="font-family: Arial, Helvetica, sans-serif;">Sport</span>
+			<ul id="imgsSport">
+				<li><img src="sport-1.jpg" alt="" width="600" height="400" /></li>
+				<li><img src="sport-2.jpg" alt="" width="600" height="400" /></li>
+				<li><img src="sport-3.jpg" alt="" width="600" height="400" /></li>
+				<li><img src="sport-4.png" alt="" width="600" height="400" /></li>
+				<li><img src="sport-5.png" alt="" width="600" height="400" /></li>
+				<li><img src="sport-6.png" alt="" width="600" height="400" /></li>
+			</ul>
+			<span class="titleSport"></span>
+		</div>
+		<div class="controller"></div>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="ImageScroll.js"></script>
+		<script type="text/javascript">
+			$('#imgsSport').imageScroll({
+				orientation: "left",
+				speed: 1000,
+				interval: 1000,
+				hoverPause: true,
+				callback: function(){
+					var ordinal = $(this).find("img").first().attr("src");
+					$(this).next("span").text("CallbackDisplay: hidden "+ordinal+"!");
+				}
+			});
+		</script>
+			<br />
+			<div id="rugby">
+			<center>
+				<font size="4" style="font-family: Arial, Helvetica, sans-serif;">I have played rugby ever since I was 6 years old. I played with my local rugby club Charleville RFC. Over the years, I have seen some success from the sport, winning a Munster Championship at U16. However I have since had to give up the sport due to injury. I am still undecided will I return to the sport after I recover, although I hope to return because simply, I love the sport.</font>
+			</center>
+		</div>
+			<br />
+		<div class="subtitle">
+			<h2 style="font-family: Arial, Helvetica, sans-serif;">Travel</h2>
+		</div>
+			<br />
+		<center>
+			<font size="4" style="font-family: Arial, Helvetica, sans-serif;">
+				Over the years, I have been lucky enough to travel to many places across the globe. A few places I have been able to visit include:
+			</font>
+			<ul style="list-style-type: none; float: center; font-size: 4; font-family: Arial, Helvetica, sans-serif;">
+				<li><strong>London, United Kingdom</strong></li>
+				<li><strong>Amsterdam, The Netherlands</strong></li>
+				<li><strong>Cinque Terre, Italy</strong></li>
+				<li><strong>Tenerife, Spain</strong></li>
+				<li><strong>Dordogne, France</strong></li>
+				<li><strong>Odessa, Ukraine</strong></li>
+			</ul>
+		<center>
+			<br />
+		<div id="containerTravel"> <span class="titleTravel" style="font-family: Arial, Helvetica, sans-serif;">Travel</span>
+			<ul id="imgsTravel">
+				<li><img src="london.jpg" alt="" width="600" height="400" /></li>
+				<li><img src="amsterdam.jpg" alt="" width="600" height="400" /></li>
+				<li><img src="cinqueterre.jpg" alt="" width="600" height="400" /></li>
+				<li><img src="tenerife.jpg" alt="" width="600" height="400" /></li>
+				<li><img src="dordogne.jpg" alt="" width="600" height="400" /></li>
+				<li><img src="odessa.jpg" alt="" width="600" height="400" /></li>
+			</ul>
+			<span class="titleTravel"></span> 
+		</div>
+		<div id="controllerTravel"></div>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="ImageScroll.js"></script>
+		<script type="text/javascript">
+			$('#imgsTravel').imageScroll({
+				orientation: "left",
+				speed: 1000,
+				interval: 1000,
+				hoverPause: true,
+				callback:function(){
+					var ordinal = $(this).find("img").first().attr("src");
+					$(this).next("span").text("CallbackDisplay: hidden "+ordinal+"!");
+				}
+			});
+		</script>
+			<br />
+			<center>
+				<font size="4" style="font-family: Arial, Helvetica, sans-serif;">I hope to travel to Budapest to the music festival <a href="https://szigetfestival.com/en-int/">Sziget 2020</a> or else travel to <a href="https://en.wikipedia.org/wiki/Ios">Ios</a> with a few of my friends this year and many more places over the course of my life.</font>
+			</center>
+		</div>
+			<br />
+		<div class="nav">
+			<a href="home.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-home"></i> Home</a>
+			<a href="cv.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-address-card"></i> Curriculum Vitae</a>
+			<a href="interests.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-bookmark"></i> Interests</a>
+			<a href="consulting.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-briefcase"></i> Consulting</a>
+			<a href="aboutconsulting.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-list-alt"></i> About Consulting</a>
+			<a href="ebus1.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-store-alt"></i> Services</a>
+			<a href="contact.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-address-book"></i> Contact</a>
+		</div>
+	</body>
+</html>

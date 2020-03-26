@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Paul Drinan</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://kit.fontawesome.com/af5f655755.js" crossorigin="anonymous"></script>
+		<style>
+			body {
+				margin: 0; 
+				overflow-x: hidden;
+			}
+
+			p {
+				padding-left: 50px;
+				padding-right: 50px;
+			}
+
+			table {
+				border: solid black 1px;
+				border-collapse: collapse;
+			}
+
+			.content {
+				margin: 0;
+			}
+
+			.topnav {
+				overflow: hidden;
+				background-color: blanchedalmond;
+			}
+
+			.topnav a {
+				float: left;
+				display: block;
+				text-align: center;
+				padding: 15px 20px;
+				text-decoration: none;
+				color: black;
+			}
+
+			.topnav a:hover {
+				background-color: white;
+				color: black;
+			}
+
+			.title {
+				background-color: cadetblue;
+				padding: 15px;
+				text-align: center;
+				border: solid black 3px;
+			}
+
+			.subtitle {
+				background-color: cadetblue;
+				padding: 10px;
+				text-align: center;
+				border: solid black 2px;
+			}
+
+			.education {
+				padding-left: 300px;
+				padding-right: 300px;
+			}
+
+			.project {
+				text-align: center;
+			}
+
+			.projectsabout {
+				padding-left: 50px;
+				padding-right: 50px;
+			}
+
+			.workexp {
+				text-align: center;
+				padding-left: 300px;
+				padding-right: 300px;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			.container {
+				position: relative;
+			}
+
+			.imgSlide {
+				display: none;
+				border: solid black 2px;
+			}
+
+			.cursor {
+				cursor: pointer;
+			}
+
+			.previous,
+			.next {
+				cursor: pointer;
+				position: absolute;
+				top: 40%;
+				width: auto;
+				padding: 16px;
+				margin-top: -50px;
+				color: white;
+				font-weight: bold;
+				font-size: 20px;
+				border-radius: 0 3px 3px 0;
+				user-select: none;
+				-webkit-user-select: none;
+			}
+
+			.next {
+				right: 0;
+				border-radius: 3px 0 0 3px;
+			}
+
+			.previous {
+				left: 0;
+			}
+
+			.previous:hover,
+			.next:hover {
+				background-color: rgba(255, 255, 255, 0.8);
+			}
+
+			.numbertext {
+				color: #f2f2f2;
+				font-size: 12px;
+				padding: 8px 12px;
+				position: absolute;
+				top: 0;
+			}
+
+			.caption-container {
+				text-align: center;
+				background-color: #222;
+				padding: 2px 16px;
+				color: white;
+			}
+
+			.row:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+
+			.demo {
+				opacity: 0.6;
+			}
+
+			.active,
+			.demo:hover {
+				opacity: 1;
+			}
+
+			.nav {
+				overflow: hidden;
+				background-color: blanchedalmond;
+				border: solid black 1px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			.nav a {
+				float: center;
+				display: block;
+				color: black;
+				text-align: center;
+				padding: 15px 20px;
+				text-decoration: none;
+				border: 1px solid white;
+			}
+
+			.nav a:hover {
+				background-color: white;
+				color: black;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="content">
+		<div class="title">
+			<h1 style="font-family: Arial, Helvetica, sans-serif;">Curriculum Vitae</h1>
+		</div>
+		
+		<div class="topnav">
+			<a href="home.html" style="font-family: Arial, Helvetica, sans-serif;"><i class="fas fa-home"></i> Home</a>
+			<a href="interests.html" style="font-family: Arial, Helvetica, sans-serif;"><i class="fas fa-bookmark"></i> Interests</a>
+			<a href="consulting.html" style="font-family: Arial, Helvetica, sans-serif;"><i class="fas fa-briefcase"></i> Consulting</a>
+			<a href="contact.html" style="font-family: Arial, Helvetica, sans-serif;"><i class="fas fa-address-book"></i> Contact</a>
+		</div>
+		
+		<div class="subtitle">
+			<h1 style="font-family: Arial, Helvetica, sans-serif;">Education</h1>
+		</div>
+		<br />
+		<img src="education-icon.png" alt="Education Symbol" hspace="650px">
+		<div class="education">
+			<h2 style="text-align: left;">University College Cork <font size="2" style="font-family: Arial, Helvetica, sans-serif;"><em>(2019-2023)</em></font> <span style="float: right;"> CBS Charleville <font size="2"><em>(2013-2019)</em></font></span></h2>
+			<font size="4" style="font-family: Arial, Helvetica, sans-serif;">BSc Business Information Systems (CK203) <span style="float: right;"> Leaving Certificate: 412 points</span></font>
+			<br />
+			<br />
+		</div>
+
+		<div class="subtitle">
+			<h1 style="font-family: Arial, Helvetica, sans-serif;">Honours and Achievements</h1>
+		</div>
+			<br />
+		<img src="achievement-icon.png" alt="Achievement Symbol" hspace="650px">
+		<center>
+			<font size="4" style="font-family: Arial, Helvetica, sans-serif;">I have many honours and achievements including:</font>
+				<ul style="list-style-type: none;font-family: Arial, Helvetica, sans-serif;">
+					<li><strong>Hurling: U13 Premier 2 Cork County Champions <em>(2013)</em> (Captain)</strong></li>
+					<li><strong>Hurling: U14 Premier 1 Cork County Champions <em>(2013)</em></strong></li>
+					<li><strong>Rugby: U16 Munster Cup Champions <em>(2015)</em></strong></li>
+					<li><strong>Eco-Unesco: Most Innovative Project Winner <em>(2017)</em></strong></li>
+					<li><strong>YSI: Make Your World Greener Challenge Winner <em>(2017)</em></strong></li>
+					<li><strong>Received Honour from the Lord Mayor of Cork <em>(2018)</em></strong></li>
+					<li><strong>University of West London: Grade 8 Classical Piano <em>(2018</em></strong></li>
+					<li><strong>Hurling: Senior Hurler with Newtownshandrum <em>(2019-Present)</em></strong></li>
+				</ul>
+		<center>
+
+		<div class="subtitle">
+			<h1 style="font-family: Arial, Helvetica, sans-serif;">Personal Projects</h1>
+		</div>
+		<img src="project-icon.png" alt="Project Symbol" hspace="650px">
+			<div class="project">
+				<h2 style="font-family: Arial, Helvetica, sans-serif;">Ditch Your Carbon Cup Print</h2>
+				<font size="4" style="font-family: Arial, Helvetica, sans-serif;"><strong>Team Leader & Marketing Manager</strong> <em>(Sept. 2016-Sept. 2018)</em></font>
+				<br />
+			</div>
+				<div class="container">
+
+  				<div class="imgSlide">
+    				<div class="numbertext">1 / 6</div>
+      				<img src="dyccp-1.jpg" style="width:99.9%">
+  				</div>
+
+  				<div class="imgSlide">
+    				<div class="numbertext">2 / 6</div>
+      				<img src="dyccp-2.jpg" style="width:99.9%">
+  				</div>
+
+  				<div class="imgSlide">
+    				<div class="numbertext">3 / 6</div>
+      				<img src="dyccp-3.jpg" style="width:99.9%">
+  				</div>
+
+  				<div class="imgSlide">
+    				<div class="numbertext">4 / 6</div>
+      				<img src="dyccp-4.jpg" style="width:99.9%">
+  				</div>
+
+  				<div class="imgSlide">
+    				<div class="numbertext">5 / 6</div>
+      				<img src="dyccp-5.jpg" style="width:99.9%">
+  				</div>
+				
+				<div class="imgSlide">
+    				<div class="numbertext">6 / 6</div>
+      				<img src="dyccp-6.jpg" style="width:99.9%">
+  				</div>
+
+  					<a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+  					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  					<div class="caption-container">
+    					<p id="caption"></p>
+  					</div>
+
+  					<div class="row">
+    					<div class="column" style="float: left; width:16.66%">
+    						<img class="demo cursor" src="dyccp-1.jpg" height="126.66px" width="190px" onclick="currentSlide(1)" alt="Photo with Denis Naughten (Minister of the Environment 2016-2018) in Leinster House">
+    					</div>
+    					<div class="column" style="float: left; width:16.66%">
+    						<img class="demo cursor" src="dyccp-2.jpg" height="126.66px" width="190px" onclick="currentSlide(2)" alt="Photo with the Lord Mayor of Cork (2018)">
+    					</div>
+    					<div class="column" style="float: left; width:16.66%">
+    						<img class="demo cursor" src="dyccp-3.jpg" height="126.66px" width="190px" onclick="currentSlide(3)" alt="Photo at the YSI Dragons Den (2017)">
+    					</div>
+    					<div class="column" style="float: left; width:16.66%">
+    						<img class="demo cursor" src="dyccp-4.jpg" height="126.66px" width="190px" onclick="currentSlide(4)" alt="Photo of a meeting with Dell EMC in their Ovens Factory">
+    					</div>
+    					<div class="column" style="float: left; width:16.66%">
+    						<img class="demo cursor" src="dyccp-5.jpg" height="126.66px" width="190px" onclick="currentSlide(5)" alt="Photo in Oddessa, Ukraine after securing 3rd place out of 33 countries at the SAGE World Cup">
+    					</div>
+						<div class="column" style="float: left; width:16.66%">
+    						<img class="demo cursor" src="dyccp-6.jpg" height="126.66px" width="190px" onclick="currentSlide(6)" alt="Photo with Simon Covney at the YSI Awards 2017">
+    					</div>
+ 					</div>
+				</div>
+			
+				<script>
+					var slideIndex = 1;
+						showSlides(slideIndex);
+
+					function plusSlides(n) {
+  						showSlides(slideIndex += n);
+					}
+
+					function currentSlide(n) {
+  						showSlides(slideIndex = n);
+					}
+
+					function showSlides(n) {
+  						var i;
+  						var slides = document.getElementsByClassName("imgSlide");
+  						var dots = document.getElementsByClassName("demo");
+  						var captionText = document.getElementById("caption");
+  						if (n > slides.length) {slideIndex = 1}
+  						if (n < 1) {slideIndex = slides.length}
+  						for (i = 0; i < slides.length; i++) {
+    						slides[i].style.display = "none";
+  					}
+  						for (i = 0; i < dots.length; i++) {
+    						dots[i].className = dots[i].className.replace(" active", "");
+  						}
+  						slides[slideIndex-1].style.display = "block";
+  						dots[slideIndex-1].className += " active";
+  						captionText.innerHTML = dots[slideIndex-1].alt;
+					}
+				</script>
+			<div class="projectabout">
+				<center>
+					<font size="4" style="font-family: Arial, Helvetica, sans-serif;">Ditch Your Carbon Cup Print was an environmental student project designed to reduce the general population’s single-use disposable cup use. The project started as an entry to the Young Social Innovators Awards 2017. With our “Ditch Your Carbon Cup Print” campaign, I played a pivotal role as Team Leader and Marketing Manager in organising, pitching, presenting and leading our team. Through-out my involvement in this project, I have had the opportunity to make many useful and interesting contact with important and experienced people. I have also been able to learn new skills such as how to negociate, how to sell, how to pitch new project ideas and overall commuinicate in a professional manner with my peers and other business partners. Within the two years our project was up and running, we managed to achieve great success and give our professional lives a head-start. Our achievements from the project include:</font>
+					
+					<ul style="list-style-type: none; font-family: Arial, Helvetica, sans-serif;">
+						<li><strong>YSI Make Your World Greener Challenge Winners 2017</strong></li>
+						<li><strong>Eco-Unesco Most Innovative Project Winners 2017</strong></li>
+						<li><strong>Represented Ireland at the SAGE World Cup 2017 and secured 3<sub>rd</sub> place out of 33 countries</strong></li>
+						<li><strong>Generated over €4000 in revenue</strong></li>
+						<li><strong>Conducted multiple meetings with TDs, Ministers and MNCs including Vodafone, Analog, HID Global, Java Republic
+							, Kerry Group and Dell EMC</strong></li>
+						<li><strong>Received multiple grants from YSI and Enterprise Ireland</strong></li>
+						<li><strong>Nominated to represent Ireland at the Sage World Cup 2018</strong></li>
+					</ul>
+				</center>
+			</div>
+
+		</div>
+		<div class="subtitle">
+			<h1 style="font-family: Arial, Helvetica, sans-serif;">Work Experience</h1>
+		</div>
+		
+		<img src="workexp-icon.png" alt="Work Experience Symbol" hspace="650px">
+		
+			<div class="workexp">
+				<h2 style="font-family: Arial, Helvetica, sans-serif;">Charleville Park Hotel</h2>
+				<h2 style="font-family: Arial, Helvetica, sans-serif;">Bartender/ Waiter</h2>
+				<font size="4" style="font-family: Arial, Helvetica, sans-serif;"><b><em>(July 2019-Present)</em></b></font>
+					<br />
+				<center>
+					<font size="4" style="font-family: Arial, Helvetica, sans-serif;">My current job responsibilities include:</font>
+					<ul style="list-style-type: none;font-family: Arial, Helvetica, sans-serif;">
+						<li><strong>Care for customers and ensure customers were pleased with their experience</strong></li>
+						<li><strong>Train new staff</strong></li>
+						<li><strong>Process cash payments and credit card transactions</strong></li>
+						<li><strong>Give valuable insight and recommendations to management based on customer feedback</strong></li>
+						<li><strong>Work as part of a team</strong></li>
+						<li><strong>Replenish and monitor stock</strong></li>
+						<li><strong>Trusted to close, clean and organise the hotel bar and prepare it for the following day</strong></li>
+					</ul>
+				</center>
+					<br />
+				<h2 style="font-family: Arial, Helvetica, sans-serif;">Nora May's Bar & Bistro</h2>
+				<h2 style="font-family: Arial, Helvetica, sans-serif;">Bartender/ Waiter</h2>
+				<font size="4" style="font-family: Arial, Helvetica, sans-serif;"><b><em>(June 2018-January 2019)</em></b></font>
+					<br />
+				<center>
+					<font size="4" style="font-family: Arial, Helvetica, sans-serif;">My job resonsibilities included:</font>
+					<ul style="list-style-type: none; font-family: Arial, Helvetica, sans-serif;">
+						<li><strong>Cared for customers and ensured customers were pleased by my services</strong></li>
+						<li><strong>Trained new staff</strong></li>
+						<li><strong>Replenished and monitored stock</strong></li>
+						<li><strong>Worked as part of a team</strong></li>
+						<li><strong>Performed offsite catering services and deliveries for customers</strong></li>
+						<li><strong>Processed cash payments and credit card transactions</strong></li>
+					</ul>
+				</center>
+					<br />
+				<h2 style="font-family: Arial, Helvetica, sans-serif;">Paul O Shea & Sons Limited</h2>
+				<h2 style="font-family: Arial, Helvetica, sans-serif;">Warehouse Assistant</h2>
+				<font size="4" style="font-family: Arial, Helvetica, sans-serif;"><b><em>(August 2016-September 2017)</em></b></font>
+					<br />
+				<center>
+					<font size="4" style="font-family: Arial, Helvetica, sans-serif;">My job responsibilities including:</font>
+					<ul style="list-style-type: none; font-family: Arial, Helvetica, sans-serif;">
+						<li><strong>Handled and documented large deliveries</strong></li>
+						<li><strong>Prepared and assisted with out-going deliveries</strong></li>
+						<li><strong>Delivered great customer service on the shop floor</strong></li>
+						<li><strong>Priced and arranged goods on the shop floor</strong></li>
+						<li><strong>Monitored stock and replenished stock where needed</strong></li>
+					</ul>
+				</center>
+			</div>
+				<br />
+		
+		<div class="subtitle">
+			<h1 style="font-family: Arial, Helvetica, sans-serif;">References</h1>
+		</div>
+		<img src="reference-icon.png" alt="Reference Symbol" hspace="650px">
+		<div class="references">
+				<br />
+			<table align="center" cellpadding="5px" style="font-family: Arial, Helvetica, sans-serif;"> 
+				<tr>
+					<th style="font-family: Arial, Helvetica, sans-serif;">Name</th>
+					<th style="font-family: Arial, Helvetica, sans-serif;">Address</th>
+					<th style="font-family: Arial, Helvetica, sans-serif;">Telephone</th>
+				</tr>
+				<tr>
+					<td style="font-family: Arial, Helvetica, sans-serif;">Mr. Eddie O Shea</td>
+					<td style="font-family: Arial, Helvetica, sans-serif;">Paul O Shea & Sons Limited, <br /> Charleville, Co. Cork</td>
+					<td style="font-family: Arial, Helvetica, sans-serif;">+353 ** *****</td>
+				</tr>
+				<tr>
+					<td style="font-family: Arial, Helvetica, sans-serif;">Ms. Cathriona McGrath</td>
+					<td style="font-family: Arial, Helvetica, sans-serif;">Nora May's Bar & Bistro, <br /> Charleville, Co. Cork</td>
+					<td style="font-family: Arial, Helvetica, sans-serif;">+353 ** *****</td>
+				</tr>	
+			</table>
+				<br />
+		</div>
+		<div class="nav">
+			<a href="home.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-home"></i> Home</a>
+			<a href="cv.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-address-card"></i> Curriculum Vitae</a>
+			<a href="interests.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-bookmark"></i> Interests</a>
+			<a href="consulting.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-briefcase"></i> Consulting</a>
+			<a href="aboutconsulting.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-list-alt"></i> About Consulting</a>
+			<a href="ebus1.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-store-alt"></i> Services</a>
+			<a href="contact.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-address-book"></i> Contact</a>
+		</div>
+	</body>
+</html>

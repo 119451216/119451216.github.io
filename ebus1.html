@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http.//www.w3.org/1999/xhtml">
+	<head>
+		<title>Services</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://kit.fontawesome.com/af5f655755.js" crossorigin="anonymous"></script>
+        <style>
+            .content {
+                margin: 0;
+            }
+
+            .topnav {
+                overflow: hidden;
+                background-color: blanchedalmond;
+            }
+
+            .topnav a {
+                float: left;
+                display: block;
+                color: #000000;
+                text-align: center;
+                padding: 15px 20px;
+                text-decoration: none;
+                color: black;
+            }
+
+            .topnav a:hover {
+                background-color: white;
+                color: black;
+            }
+            
+            .title {
+				background-color: cadetblue;
+				padding: 15px;
+				text-align: center;
+				border: solid black 2px;
+			}
+            
+            .nav {
+				overflow: hidden;
+				background-color: blanchedalmond;
+				border: solid black 1px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			.nav a {
+				float: center;
+				display: block;
+				color: black;
+				text-align: center;
+				padding: 15px 20px;
+				text-decoration: none;
+				border: 1px solid white;
+			}
+
+			.nav a:hover {
+				background-color: white;
+				color: black;
+			}
+        </style>
+    </head>
+
+	<body>
+		<div class="topnav">
+  			<a class="active" href="home.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-home"></i> Home</a>
+            <a href="cv.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-address-card"></i> Curriculum Vitae</a>
+  			<a href="consulting.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-briefcase"></i> Consulting</a>
+            <a href="aboutconsulting.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-list-alt"></i> About Consulting</a>
+            <a href="contact.html" style="font-family: Arial, Helvetica, sans-serif;"><i class="fas fa-address-book"></i> Contact</a>
+		</div>
+ 
+        <center>
+        <div class="form">
+            <form name="intCalc" method="post" action="eBus1.php">
+            <div class="title">
+                <center>
+            		<h1 size="4" style="font-family: Arial, Helvetica,sans-serif;">Drinan Consulting</h1>    
+                </center>
+            </div>
+        		<br />
+        		<center>
+            		<table cellspacing="20">
+               			<tr>
+                    		<td size="4" style="font-family: Arial, Helvetica,sans-serif;"><b>Package</b></td>
+                		</tr>
+                		<tr>
+                    		<td size="4" style="font-family: Arial, Helvetica,sans-serif;">Hyperautomation @ $200</td>
+                    		<td><input type="radio" id="Hyperautomation" name="rdoGroup" value="200"  required /></td>
+                		</tr>
+                		<tr>
+                    		<td size="4" style="font-family: Arial, Helvetica,sans-serif;">Multiexperience @ $500</td>
+                    		<td><input type="radio" id="Multiexperience" name="rdoGroup" value="500"  /></td>
+                		</tr>
+                		<tr>
+                    		<td size="4" style="font-family: Arial, Helvetica,sans-serif;">Distributed Cloud @ $1000</td>
+                    		<td><input type="radio" id="DistributedCloud" name="rdoGroup" value="1000" /></td>
+                		</tr>
+            		</table>
+        		</center>
+        			<br/>
+            	<center>
+                 <table cellspacing="10">
+            		<tr>
+                    	<td><b></b></td>
+                    	<td size="4" style="font-family: Arial, Helvetica,sans-serif;"><b>Amount</b></td>
+            		</tr>
+                	<tr>
+                    	<td size="4" style="font-family: Arial, Helvetica,sans-serif;">Sub Total</td>
+                    	<td><input type="text" id="txtSubTot" name="txtSub" readonly  required /></td>
+                	</tr>
+                	<tr>
+                    	<td size="4" style="font-family: Arial, Helvetica,sans-serif;">Discount @ 5%</td>
+                    	<td><input type="text" id="txtDisc" name="txtDisc" readonly  required /></td>
+                	</tr>
+                	<tr>
+                    	<td size="4" style="font-family: Arial, Helvetica,sans-serif;">+ VAT @ 20%</td>
+                    	<td><input type="text" id="txtVAT" name="txtVAT" readonly required /></td>
+                	</tr>
+                	<tr>
+                    	<td size="4" style="font-family: Arial, Helvetica,sans-serif;">Total</td>
+                    	<td><input type="text" id="txtTotal" name="txtTotal" value="" readonly required /></td>
+                	</tr>
+            	</table>
+        	</center>
+        		<br />
+            <center>
+            	<input type="button" name="btnCalc" id="btnCalc" onclick="calcSub()" value="Calculate Amount" size="4" style="font-family: Arial, Helvetica,sans-serif;" />
+            	<input type="reset" name="btnClear" id="btnClear" value="Clear" size="4" style="font-family: Arial, Helvetica,sans-serif;" />   
+        	</center>
+           </form>
+        </div>
+        	</center>
+            	<script type="text/javascript">
+                	function calcSub(){
+                    	var argSelection = parseFloat(document.getElementById('txtSubTot').value);
+                    	var Hyperautomation = parseFloat(document.getElementById('Hyperautomation').value);
+                    	var Multiexperience = parseFloat(document.getElementById('Multiexperience').value);
+                    	var DistributedCloud = parseFloat(document.getElementById('DistributedCloud').value);
+                   
+                   
+                    	if (document.getElementById('Hyperautomation').checked) {
+                        document.intCalc.txtSubTot.value = Hyperautomation;
+                        argSelection = Hyperautomation;
+                        calcVatTotal(argSelection);
+                       
+                    	}
+                   		else if (document.getElementById('Multiexperience').checked) {
+                        	document.intCalc.txtSubTot.value = Multiexperience;
+                        	argSelection = Multiexperience;
+                        	calcVatTotal(argSelection);
+                       
+                    	}
+                    	else if (document.getElementById('DistributedCloud').checked) {
+                        	document.intCalc.txtSubTot.value = DistributedCloud;
+                        	argSelection = DistributedCloud;
+                        	calcVatTotal(argSelection);
+                    	}
+                	}
+               
+               
+                	function calcVatTotal(parmSelection) {
+                    	var argsubTotal = parseFloat(parmSelection);
+                    	var argdiscountAmt = parseFloat(argsubTotal * .05);
+                    	var argvatAmt = parseFloat(argsubTotal * .20);    
+                    	var argtotalPrice = parseFloat(argsubTotal - argdiscountAmt + argvatAmt);
+                   	calcDisp(argsubTotal, argdiscountAmt,argvatAmt,argtotalPrice);
+                   
+                 
+                	}
+
+					function calcDisp(parmsubTotal, parmdiscountAmt, parmvatAmt, parmtotalPrice){
+						document.intCalc.txtSubTot.value = parmsubTotal;
+						document.intCalc.txtDisc.value = parmdiscountAmt;
+                    	document.intCalc.txtVAT.value = parmvatAmt;
+                    	document.intCalc.txtTotal.value = parmtotalPrice;
+					} 
+            	</script>
+            <br />
+        <div class="nav">
+			<a href="home.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-home"></i> Home</a>
+			<a href="cv.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-address-card"></i> Curriculum Vitae</a>
+			<a href="interests.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-bookmark"></i> Interests</a>
+			<a href="consulting.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-briefcase"></i> Consulting</a>
+			<a href="aboutconsulting.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-list-alt"></i> About Consulting</a>
+			<a href="ebus1.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-store-alt"></i> Services</a>
+			<a href="contact.html" style="font-family: Arial, Helvetica,sans-serif;"><i class="fas fa-address-book"></i> Contact</a>
+		</div>
+    </body>
+</html>
